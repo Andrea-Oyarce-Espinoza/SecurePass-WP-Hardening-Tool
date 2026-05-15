@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass & WP-Hardening Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SecurePass <span>& WP-Hardening</span></h1>
+            <p>Herramienta técnica para seguridad web</p>
+        </header>
+
+        <!--Sección Generador-->
+        <section class="card">
+            <h2>Generador de Contraseña Segura</h2>
+            <div class="result-container">
+                <input type="text" id="password-display" readonly placeholder="Generar clave...">
+                <button id="copy-btn">Copiar</button>
+            </div>
+
+            <div class="settings">
+                <div class="setting">
+                    <label>Largo: <span id="length-val">16</span></label>
+                    <input type="range" id="length-slider" min="8" max="32" value="16">
+                </div>
+            </div>
+            <button id="generate-btn" class="main-btn">Generar Nueva Clave</button>
+        </section>
+        
+        <!--Sección WordPress Rules-->
+        <section class="card">
+            <h2>Reglas de Hardening (WP)</h2>
+            <p class="subtitle">Añade esto a tu archivo .htaccess</p>
+            <pre id="htaccess-display">
+
+            </pre>
+            <button id="copy-htaccess" class="secondary-btn">Copiar .htaccess</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #0f172a; 
+    --card-bg: #1e293b; 
+    --primary-color: #38bdf8;
+    --accent-color: #818cf8; 
+    --text-main: #f1f5f9; 
+    --text-dim: #94a3b8; 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--text-dim);
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.result-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.main-btn, .secondary-btn, #copy-btn {
+ cursor: pointer;
+ border: none;
+ border-radius: 6px;
+ font-weight: bold;
+ transition: 0.3s;   
+}
+
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: #000;
+}
+
+.main-btn:hover {
+    background: #7dd3fc;
+}
+
+#copy-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 0 20px;
+}
+
+.setting {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+pre {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #10b981; /* Color verde tipo terminal */
+    overflow-x: auto;
+    margin-top: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.secondary-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
